@@ -12,7 +12,7 @@ const html = `<!DOCTYPE html>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:300,400,700" rel="stylesheet" />
-    <link rel="icon" type="image/x-icon" href="https://www.prescribit.com/assets/favicon.png">
+    <link rel="icon" type="image/x-icon" href="[[favicon]]">
     <style>
       body {
         margin: 0;
@@ -39,9 +39,10 @@ function redocHtml(
     specUrl: 'http://petstore.swagger.io/v2/swagger.json'
   }
 ): string {
-  const { title, specUrl, nonce = '', redocOptions = {} } = options;
+  const { title, favicon, specUrl, nonce = '', redocOptions = {} } = options;
   return html
     .replace('[[title]]', title)
+    .replace('[[favicon]]', favicon)
     .replace('[[spec-url]]', specUrl)
     .replace('[[nonce]]', nonce)
     .replace('[[options]]', JSON.stringify(redocOptions));
