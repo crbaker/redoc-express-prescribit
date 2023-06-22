@@ -1,4 +1,4 @@
-# [redoc-express][redoc-express]
+# [redoc-express-prescribit][redoc-express-prescribit]
 
 > Express Middleware for OpenAPI/Swagger-generated API Reference Documentation
 
