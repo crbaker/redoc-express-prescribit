@@ -1,5 +1,6 @@
 export interface Ioption {
   title: string;
+  favicon: string;
   specUrl: string;
   nonce?: string;
   redocOptions?: object;
@@ -36,6 +37,7 @@ const html = `<!DOCTYPE html>
 function redocHtml(
   options: Ioption = {
     title: 'ReDoc',
+    favicon: '',
     specUrl: 'http://petstore.swagger.io/v2/swagger.json'
   }
 ): string {

@@ -3,6 +3,7 @@ import { redocHtml, Ioption } from './redoc-html-template';
 function redocExpressMiddleware(
   options: Ioption = {
     title: 'ReDoc',
+    favicon:'',
     specUrl: 'http://petstore.swagger.io/v2/swagger.json'
   }
 ): any {
